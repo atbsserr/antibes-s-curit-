@@ -4,154 +4,55 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Antibes Serrures | Serrurier 24h/24</title>
-<meta name="description" content="Serrurier Antibes 24h/24, dépannage rapide, portes blindées, serrures A2P">
+<title>Antibes Serrures — Point Fort FICHET</title>
+
+<meta name="description" content="Serrurier Antibes 24h/24 7j/7">
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Exo+2:wght@300;400;700&display=swap" rel="stylesheet">
 
 <style>
-:root{
-  --black:#090909;
-  --card:#151515;
-  --green:#00e676;
-  --text:#e8e8e8;
-}
-
-body{
-  margin:0;
-  font-family:Arial;
-  background:var(--black);
-  color:var(--text);
-}
-
-/* HEADER */
-header{
-  position:fixed;
-  top:0;
-  width:100%;
-  background:#000;
-  padding:15px;
-  text-align:center;
-  z-index:1000;
-}
-
-header h1{
-  margin:0;
-  color:var(--green);
-}
-
-/* HERO */
-.hero{
-  padding:120px 20px 60px;
-  text-align:center;
-}
-
-.hero h2{
-  font-size:40px;
-}
-
-.btn{
-  display:inline-block;
-  background:var(--green);
-  color:#000;
-  padding:15px 30px;
-  margin-top:20px;
-  text-decoration:none;
-  font-weight:bold;
-}
-
-/* SERVICES */
-.services{
-  padding:60px 20px;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-}
-
-.card{
-  background:var(--card);
-  padding:15px;
-}
-
-.card img{
-  width:100%;
-  height:180px;
-  object-fit:cover;
-}
-
-/* GALLERY */
-.gallery{
-  padding:60px 20px;
-}
-
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:10px;
-}
-
-.grid img{
-  width:100%;
-  height:150px;
-  object-fit:cover;
-}
-
-/* FOOTER */
-footer{
-  padding:40px;
-  text-align:center;
-  background:#000;
-}
+body{margin:0;background:#090909;color:#fff;font-family:"Exo 2"}
+.hero{padding:120px 20px;text-align:center}
+h1{font-family:"Bebas Neue";font-size:60px}
+.btn{background:#00e676;color:#000;padding:15px 30px;text-decoration:none;font-weight:bold}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px;padding:40px}
+.grid img{width:100%;height:200px;object-fit:cover}
 </style>
 </head>
 
 <body>
 
-<header>
-  <h1>🔐 Antibes Serrures</h1>
-</header>
-
 <section class="hero">
-  <h2>Votre sécurité, notre urgence</h2>
-  <p>Intervention en moins de 20 minutes — 24h/24</p>
-  <a href="tel:0493616130" class="btn">📞 04 93 61 61 30</a>
+  <h1>ANTIBES SERRURES</h1>
+  <p>Votre sécurité, notre urgence</p>
+  <a href="tel:0493616130" class="btn">📞 Appeler</a>
 </section>
 
-<section class="services">
-  <div class="card">
-    <img src="images/porte1.jpg">
-    <h3>Porte blindée</h3>
-  </div>
+<section class="grid" id="photoGrid"></section>
 
-  <div class="card">
-    <img src="images/serrure1.jpg">
-    <h3>Serrures A2P</h3>
-  </div>
+<script>
 
-  <div class="card">
-    <img src="images/volet1.jpg">
-    <h3>Volets roulants</h3>
-  </div>
+// 🔥 TES PHOTOS (remplace par les tiennes)
+const PHOTOS = [
+  {src:"images/porte1.jpg", label:"Porte blindée", cat:"portes"},
+  {src:"images/serrure1.jpg", label:"Serrure", cat:"serrures"},
+  {src:"images/volet1.jpg", label:"Volet roulant", cat:"volets"},
+  {src:"images/coffre1.jpg", label:"Coffre-fort", cat:"coffres"},
+];
 
-  <div class="card">
-    <img src="images/coffre1.jpg">
-    <h3>Coffres-forts</h3>
-  </div>
-</section>
+// GENERATE GRID
+const grid = document.getElementById("photoGrid");
 
-<section class="gallery">
-  <h2>Nos réalisations</h2>
+PHOTOS.forEach(p=>{
+  grid.innerHTML += `
+    <div>
+      <img src="${p.src}">
+      <p>${p.label}</p>
+    </div>
+  `;
+});
 
-  <div class="grid">
-    <img src="images/porte1.jpg">
-    <img src="images/serrure1.jpg">
-    <img src="images/volet1.jpg">
-    <img src="images/coffre1.jpg">
-  </div>
-</section>
-
-<footer>
-  <p>📞 04 93 61 61 30</p>
-  <p>Antibes · Cannes · Nice</p>
-</footer>
+</script>
 
 </body>
 </html>
