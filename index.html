@@ -3,111 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Antibes Serrures — Point Fort FICHET</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Exo+2:wght@300;400;700&display=swap" rel="stylesheet">
-
+<title>Antibes Serrures - Expert Serrurerie</title>
 <style>
-body{margin:0;background:#090909;color:#fff;font-family:"Exo 2"}
-.hero{padding:120px 20px;text-align:center}
-h1{font-family:"Bebas Neue";font-size:60px}
-.btn{background:#00e676;color:#000;padding:15px 30px;text-decoration:none;font-weight:bold;display:inline-block;margin-top:20px}
-
-/* SERVICES */
-.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;padding:40px}
-.card{background:#151515;padding:10px}
-.card img{width:100%;height:180px;object-fit:cover}
-
-/* GALLERY */
-.gallery{padding:40px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
-.grid img{width:100%;height:150px;object-fit:cover}
-
-/* REVIEWS */
-.reviews{padding:60px 20px;background:#111;overflow:hidden}
-.carousel{overflow:hidden}
-.track{display:flex;gap:20px;width:max-content;animation:scroll 40s linear infinite}
-.track:hover{animation-play-state:paused}
-.card-avis{background:#151515;padding:20px;width:280px;flex-shrink:0;border:1px solid rgba(0,255,150,0.2)}
-.stars{color:gold;margin-bottom:10px}
-
-@keyframes scroll{
-0%{transform:translateX(0)}
-100%{transform:translateX(-50%)}
-}
+body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f8f8f8; color:#333;}
+header {background:#004080; color:white; padding:20px; text-align:center;}
+header h1 {margin:0; font-size:2em;}
+header p {margin:5px 0; font-size:1.1em;}
+nav {background:#0066cc; padding:10px; text-align:center;}
+nav a {color:white; text-decoration:none; margin:0 15px; font-weight:bold;}
+nav a:hover {text-decoration:underline;}
+.carousel {width:90%; margin:20px auto; overflow:hidden; position:relative; background:white; padding:20px; border-radius:10px; border:1px solid #ccc;}
+.carousel-inner {display:flex; width:max-content; animation:scroll 200s linear infinite;}
+.carousel-item {min-width:300px; margin-right:20px; padding:10px; background:#e0e0e0; border-radius:5px;}
+@keyframes scroll {0% {transform: translateX(0);} 100% {transform: translateX(-100%);}}
+.instagram {display:flex; flex-wrap:wrap; justify-content:center; margin:20px 0;}
+.instagram img {width:150px; height:150px; object-fit:cover; margin:5px; border-radius:10px;}
+footer {background:#004080; color:white; text-align:center; padding:20px;}
+footer a {color:white; text-decoration:none; font-weight:bold;}
+section {padding:20px;}
+h2 {text-align:center;}
 </style>
 </head>
-
 <body>
 
-<section class="hero">
-<h1>ANTIBES SERRURES</h1>
-<p>Votre sécurité, notre urgence</p>
-<a href="tel:0493616130" class="btn">📞 04 93 61 61 30</a>
+<header>
+    <h1>Antibes Serrures</h1>
+    <p>Votre expert en serrurerie à Antibes</p>
+    <p>Téléphone: <a href="tel:0493616130" style="color:white;">0493616130</a> | Email: <a href="mailto:CONTACT@ANTIBES-SERRURES.COM" style="color:white;">CONTACT@ANTIBES-SERRURES.COM</a></p>
+</header>
+
+<nav>
+    <a href="#avis">Avis Clients</a>
+    <a href="#instagram">Photos Instagram</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="avis" class="carousel">
+    <div class="carousel-inner">
+        <!-- 400 avis répétitifs pour exemple -->
+        <!-- Tu peux remplacer ou ajouter les vrais avis -->
+        <div class="carousel-item">⭐⭐⭐⭐⭐ "Très réactif et professionnel !" – Jean D.</div>
+        <div class="carousel-item">⭐⭐⭐⭐⭐ "Service impeccable, je recommande !" – Marie L.</div>
+        <div class="carousel-item">⭐⭐⭐⭐⭐ "Intervention rapide et efficace." – Paul R.</div>
+        <div class="carousel-item">⭐⭐⭐⭐⭐ "Super travail, équipe très sympa !" – Sophie M.</div>
+        <div class="carousel-item">⭐⭐⭐⭐⭐ "Excellent service, prix corrects." – Ahmed B.</div>
+        <!-- Copie ces items pour atteindre 400 avis -->
+        <!-- Exemple de duplication rapide -->
+        <script>
+        const container = document.querySelector('.carousel-inner');
+        const items = Array.from(container.children);
+        for(let i=0;i<80;i++){ // 5 avis x 80 = 400
+            items.forEach(item => {
+                const clone = item.cloneNode(true);
+                container.appendChild(clone);
+            });
+        }
+        </script>
+    </div>
 </section>
 
-<section class="services" id="services"></section>
-
-<section class="gallery">
-<h2>Nos réalisations</h2>
-<div class="grid" id="grid"></div>
+<section id="instagram" class="instagram">
+    <!-- Placeholders Instagram -->
+    <img src="https://via.placeholder.com/150?text=Photo1" alt="Instagram Photo 1">
+    <img src="https://via.placeholder.com/150?text=Photo2" alt="Instagram Photo 2">
+    <img src="https://via.placeholder.com/150?text=Photo3" alt="Instagram Photo 3">
+    <img src="https://via.placeholder.com/150?text=Photo4" alt="Instagram Photo 4">
+    <img src="https://via.placeholder.com/150?text=Photo5" alt="Instagram Photo 5">
+    <!-- Remplace par tes vraies photos Instagram -->
 </section>
 
-<section class="reviews">
-<h2 style="text-align:center;font-family:Bebas Neue">Avis clients</h2>
-<div class="carousel">
-<div class="track" id="track"></div>
-</div>
-</section>
-
-<script>
-
-// 🔥 PHOTOS (REMPLACE PAR LES TIENNES)
-const PHOTOS = [
-{src:"https://via.placeholder.com/400", label:"Porte blindée"},
-{src:"https://via.placeholder.com/400", label:"Serrure"},
-{src:"https://via.placeholder.com/400", label:"Volet roulant"},
-{src:"https://via.placeholder.com/400", label:"Coffre-fort"},
-];
-
-// SERVICES
-const services = document.getElementById("services");
-PHOTOS.forEach(p=>{
-services.innerHTML += `
-<div class="card">
-<img src="${p.src}">
-<h3>${p.label}</h3>
-</div>`;
-});
-
-// GALLERY
-const grid = document.getElementById("grid");
-PHOTOS.forEach(p=>{
-grid.innerHTML += `<img src="${p.src}">`;
-});
-
-// REVIEWS
-const REVIEWS = [
-{text:"Service ultra rapide, serrurier en 15 min",name:"Sophie",stars:5},
-{text:"Prix annoncé avant, très pro",name:"Thomas",stars:5},
-{text:"Super efficace",name:"Barbara",stars:5},
-{text:"Très compétent",name:"Carlos",stars:5},
-{text:"Intervention en 5 min",name:"Nathalie",stars:5},
-];
-
-// CAROUSEL
-const track = document.getElementById("track");
-[...REVIEWS,...REVIEWS].forEach(r=>{
-track.innerHTML += `
-<div class="card-avis">
-<div class="stars">${"★".repeat(r.stars)}</div>
-<p>"${r.text}"</p>
-<strong>${r.name}</strong>
-</div>`;
-});
-
-</script>
-
-</body>
-</html>
+<section id="contact" style="text-align:center; background:white; margin:20px 0; padding:40px 20px;">
+    <h2>Contact
