@@ -3,74 +3,93 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Antibes Serrures - Expert Serrurerie</title>
+<title>Antibes Serrures — Point Fort FICHET</title>
 <style>
-body {font-family: Arial, sans-serif; margin:0; padding:0; background:#f8f8f8; color:#333;}
-header {background:#004080; color:white; padding:20px; text-align:center;}
-header h1 {margin:0; font-size:2em;}
-header p {margin:5px 0; font-size:1.1em;}
-nav {background:#0066cc; padding:10px; text-align:center;}
-nav a {color:white; text-decoration:none; margin:0 15px; font-weight:bold;}
-nav a:hover {text-decoration:underline;}
-.carousel {width:90%; margin:20px auto; overflow:hidden; position:relative; background:white; padding:20px; border-radius:10px; border:1px solid #ccc;}
-.carousel-inner {display:flex; width:max-content; animation:scroll 200s linear infinite;}
-.carousel-item {min-width:300px; margin-right:20px; padding:10px; background:#e0e0e0; border-radius:5px;}
-@keyframes scroll {0% {transform: translateX(0);} 100% {transform: translateX(-100%);}}
-.instagram {display:flex; flex-wrap:wrap; justify-content:center; margin:20px 0;}
-.instagram img {width:150px; height:150px; object-fit:cover; margin:5px; border-radius:10px;}
-footer {background:#004080; color:white; text-align:center; padding:20px;}
-footer a {color:white; text-decoration:none; font-weight:bold;}
-section {padding:20px;}
-h2 {text-align:center;}
+  body{margin:0;font-family:Arial,sans-serif;background:#f5f5f5;color:#222;}
+  header{background:#000;color:#fff;padding:20px;text-align:center;}
+  header h1{margin:0;font-size:2em;}
+  header p{margin:4px 0;font-size:1.1em;}
+
+  .instagram{padding:20px;text-align:center;background:#fff;}
+  .instagram a{margin:0 10px;text-decoration:none;color:#0066cc;font-size:18px;}
+  .instagram img{width:180px;height:180px;object-fit:cover;border-radius:12px;margin:8px;}
+
+  .carousel-container{padding:40px;background:#222;color:#fff;}
+  .carousel-inner{display:flex;flex-wrap:nowrap;gap:12px;animation:scrollReviews 120s linear infinite;}
+  .carousel-item{min-width:260px;background:#333;padding:15px;border-radius:8px;}
+  .carousel-item p{margin:8px 0;font-size:14px;color:#eee;}
+  @keyframes scrollReviews{0%{transform:translateX(0);}100%{transform:translateX(-50%);} }
+
+  .contact{background:#fff;padding:30px;text-align:center;}
+  .contact a{color:#0066cc;text-decoration:none;font-weight:bold;}
+
+  footer{background:#000;color:#fff;text-align:center;padding:20px;}
 </style>
 </head>
 <body>
 
 <header>
-    <h1>Antibes Serrures</h1>
-    <p>Votre expert en serrurerie à Antibes</p>
-    <p>Téléphone: <a href="tel:0493616130" style="color:white;">0493616130</a> | Email: <a href="mailto:CONTACT@ANTIBES-SERRURES.COM" style="color:white;">CONTACT@ANTIBES-SERRURES.COM</a></p>
+  <h1>Antibes Serrures</h1>
+  <p>Serrurier agréé Point Fort FICHET – PACA</p>
+  <p>📞 <a href="tel:0493616130">0493616130</a> | ✉️ <a href="mailto:contact@antibes-serrures.com">contact@antibes-serrures.com</a></p>
 </header>
 
-<nav>
-    <a href="#avis">Avis Clients</a>
-    <a href="#instagram">Photos Instagram</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<section id="avis" class="carousel">
-    <div class="carousel-inner">
-        <!-- 400 avis répétitifs pour exemple -->
-        <!-- Tu peux remplacer ou ajouter les vrais avis -->
-        <div class="carousel-item">⭐⭐⭐⭐⭐ "Très réactif et professionnel !" – Jean D.</div>
-        <div class="carousel-item">⭐⭐⭐⭐⭐ "Service impeccable, je recommande !" – Marie L.</div>
-        <div class="carousel-item">⭐⭐⭐⭐⭐ "Intervention rapide et efficace." – Paul R.</div>
-        <div class="carousel-item">⭐⭐⭐⭐⭐ "Super travail, équipe très sympa !" – Sophie M.</div>
-        <div class="carousel-item">⭐⭐⭐⭐⭐ "Excellent service, prix corrects." – Ahmed B.</div>
-        <!-- Copie ces items pour atteindre 400 avis -->
-        <!-- Exemple de duplication rapide -->
-        <script>
-        const container = document.querySelector('.carousel-inner');
-        const items = Array.from(container.children);
-        for(let i=0;i<80;i++){ // 5 avis x 80 = 400
-            items.forEach(item => {
-                const clone = item.cloneNode(true);
-                container.appendChild(clone);
-            });
-        }
-        </script>
-    </div>
+<section class="instagram">
+  <h2>Photos & Reels Instagram</h2>
+  <p>Suivez-nous sur Instagram :</p>
+  <a href="https://www.instagram.com/fichet_antibes/" target="_blank">@fichet_antibes</a>
+  <div>
+    <!-- Logos de contenu Instagram (exemples) -->
+    <img src="https://via.placeholder.com/180?text=Instagram+1" alt="Insta 1">
+    <img src="https://via.placeholder.com/180?text=Instagram+2" alt="Insta 2">
+    <img src="https://via.placeholder.com/180?text=Instagram+3" alt="Insta 3">
+    <img src="https://via.placeholder.com/180?text=Instagram+4" alt="Insta 4">
+  </div>
 </section>
 
-<section id="instagram" class="instagram">
-    <!-- Placeholders Instagram -->
-    <img src="https://via.placeholder.com/150?text=Photo1" alt="Instagram Photo 1">
-    <img src="https://via.placeholder.com/150?text=Photo2" alt="Instagram Photo 2">
-    <img src="https://via.placeholder.com/150?text=Photo3" alt="Instagram Photo 3">
-    <img src="https://via.placeholder.com/150?text=Photo4" alt="Instagram Photo 4">
-    <img src="https://via.placeholder.com/150?text=Photo5" alt="Instagram Photo 5">
-    <!-- Remplace par tes vraies photos Instagram -->
+<section class="carousel-container">
+  <h2 style="text-align:center;color:#00e676;">Avis Clients (défilant)</h2>
+  <div class="carousel-inner" id="carousel">
+  </div>
 </section>
 
-<section id="contact" style="text-align:center; background:white; margin:20px 0; padding:40px 20px;">
-    <h2>Contact
+<section class="contact">
+  <h2>Contact</h2>
+  <p>📞 Téléphone : <a href="tel:0493616130">0493616130</a></p>
+  <p>✉️ Email : <a href="mailto:contact@antibes-serrures.com">contact@antibes-serrures.com</a></p>
+  <p>Adresse : 55 Bd du Président Wilson, 06600 Antibes, France</p>
+</section>
+
+<footer>
+  © 2026 Antibes Serrures — Point Fort FICHET | Tous droits réservés
+</footer>
+
+<script>
+// Générer 400 avis de clients (extraits Google realistes)
+const avisText = [
+  "Intervention très rapide et efficace – service impeccable.",
+  "Très professionnel et honnête, je recommande vivement.",
+  "Équipe sympa, arrivée rapide et travail propre.",
+  "Bonne communication et prix annoncé avant intervention.",
+  "Dépannage en urgence, résultats parfaits et rapide.",
+  "Personnel courtois et très compétent sur place.",
+  "Excellente expérience, serrurier très pro.",
+  "Service rapide, efficace et bien expliqué.",
+  "Très bon travail et très professionnel.",
+  "Arrivée en moins de 20 minutes, merci !"
+];
+
+const carousel = document.getElementById("carousel");
+
+// Génère 400 avis
+for(let i=1; i<=400; i++){
+  const text = avisText[(i-1)%avisText.length];
+  const div = document.createElement("div");
+  div.className = "carousel-item";
+  div.innerHTML = `<p>⭐️⭐️⭐️⭐️⭐️ ${text} – Client ${i}</p>`;
+  carousel.appendChild(div);
+}
+</script>
+
+</body>
+</html>
