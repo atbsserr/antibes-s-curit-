@@ -6,50 +6,105 @@
 
 <title>Antibes Serrures — Point Fort FICHET</title>
 
-<meta name="description" content="Serrurier Antibes 24h/24 7j/7">
-
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Exo+2:wght@300;400;700&display=swap" rel="stylesheet">
 
 <style>
 body{margin:0;background:#090909;color:#fff;font-family:"Exo 2"}
 .hero{padding:120px 20px;text-align:center}
 h1{font-family:"Bebas Neue";font-size:60px}
-.btn{background:#00e676;color:#000;padding:15px 30px;text-decoration:none;font-weight:bold}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:10px;padding:40px}
-.grid img{width:100%;height:200px;object-fit:cover}
+.btn{background:#00e676;color:#000;padding:15px 30px;text-decoration:none;font-weight:bold;display:inline-block;margin-top:20px}
+
+/* SERVICES */
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;padding:40px}
+.card{background:#151515;padding:10px}
+.card img{width:100%;height:180px;object-fit:cover}
+
+/* GALLERY */
+.gallery{padding:40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.grid img{width:100%;height:150px;object-fit:cover}
+
+/* REVIEWS */
+.reviews{padding:60px 20px;background:#111;overflow:hidden}
+.carousel{overflow:hidden}
+.track{display:flex;gap:20px;width:max-content;animation:scroll 40s linear infinite}
+.track:hover{animation-play-state:paused}
+.card-avis{background:#151515;padding:20px;width:280px;flex-shrink:0;border:1px solid rgba(0,255,150,0.2)}
+.stars{color:gold;margin-bottom:10px}
+
+@keyframes scroll{
+0%{transform:translateX(0)}
+100%{transform:translateX(-50%)}
+}
 </style>
 </head>
 
 <body>
 
 <section class="hero">
-  <h1>ANTIBES SERRURES</h1>
-  <p>Votre sécurité, notre urgence</p>
-  <a href="tel:0493616130" class="btn">📞 Appeler</a>
+<h1>ANTIBES SERRURES</h1>
+<p>Votre sécurité, notre urgence</p>
+<a href="tel:0493616130" class="btn">📞 04 93 61 61 30</a>
 </section>
 
-<section class="grid" id="photoGrid"></section>
+<section class="services" id="services"></section>
+
+<section class="gallery">
+<h2>Nos réalisations</h2>
+<div class="grid" id="grid"></div>
+</section>
+
+<section class="reviews">
+<h2 style="text-align:center;font-family:Bebas Neue">Avis clients</h2>
+<div class="carousel">
+<div class="track" id="track"></div>
+</div>
+</section>
 
 <script>
 
-// 🔥 TES PHOTOS (remplace par les tiennes)
+// 🔥 PHOTOS (REMPLACE PAR LES TIENNES)
 const PHOTOS = [
-  {src:"images/porte1.jpg", label:"Porte blindée", cat:"portes"},
-  {src:"images/serrure1.jpg", label:"Serrure", cat:"serrures"},
-  {src:"images/volet1.jpg", label:"Volet roulant", cat:"volets"},
-  {src:"images/coffre1.jpg", label:"Coffre-fort", cat:"coffres"},
+{src:"https://via.placeholder.com/400", label:"Porte blindée"},
+{src:"https://via.placeholder.com/400", label:"Serrure"},
+{src:"https://via.placeholder.com/400", label:"Volet roulant"},
+{src:"https://via.placeholder.com/400", label:"Coffre-fort"},
 ];
 
-// GENERATE GRID
-const grid = document.getElementById("photoGrid");
-
+// SERVICES
+const services = document.getElementById("services");
 PHOTOS.forEach(p=>{
-  grid.innerHTML += `
-    <div>
-      <img src="${p.src}">
-      <p>${p.label}</p>
-    </div>
-  `;
+services.innerHTML += `
+<div class="card">
+<img src="${p.src}">
+<h3>${p.label}</h3>
+</div>`;
+});
+
+// GALLERY
+const grid = document.getElementById("grid");
+PHOTOS.forEach(p=>{
+grid.innerHTML += `<img src="${p.src}">`;
+});
+
+// REVIEWS
+const REVIEWS = [
+{text:"Service ultra rapide, serrurier en 15 min",name:"Sophie",stars:5},
+{text:"Prix annoncé avant, très pro",name:"Thomas",stars:5},
+{text:"Super efficace",name:"Barbara",stars:5},
+{text:"Très compétent",name:"Carlos",stars:5},
+{text:"Intervention en 5 min",name:"Nathalie",stars:5},
+];
+
+// CAROUSEL
+const track = document.getElementById("track");
+[...REVIEWS,...REVIEWS].forEach(r=>{
+track.innerHTML += `
+<div class="card-avis">
+<div class="stars">${"★".repeat(r.stars)}</div>
+<p>"${r.text}"</p>
+<strong>${r.name}</strong>
+</div>`;
 });
 
 </script>
